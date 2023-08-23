@@ -10,7 +10,11 @@ function App() {
 
   return (
     <>
-      <div></div>
+      <Hero />
+      <Game />
+      <Slide title= {"cool title"} text={"cool text"} img={"./../public/Imgs/eggMan.jpg"} />
+      <Slide title= {"cool title"} text={"cool text"} img={"./../public/Imgs/eggMan.jpg"} />
+      <About text={"lots of text"} img={"./../public/Imgs/toiletMan.jpg"} />
     </>
   );
 }
