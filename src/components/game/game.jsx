@@ -1,9 +1,8 @@
+import styled from "styled-components";
 import React from "react";
 
 const Game = () => {
-  return (
-    <></>
-  )
-}
+  return <></>;
+};
 
 export default Game;
