@@ -1,12 +1,21 @@
 import styled from "styled-components";
 import React from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const Hero = () => {
+  const { scrollYProgress } = useScroll();
+
+  const x = useTransform(scrollYProgress, [0, 1], ["50%", "-95%"]);
+
   return (
     <>
       <HeroContainer>
-        <LeftSplitHero>SAMMAN</LeftSplitHero>
-        <SplitHero>SLAGET</SplitHero>
+        <motion.div style={{ x }}>
+          <LeftSplitHero>SAMMAN</LeftSplitHero>
+        </motion.div>
+        <motion.div style={{ x }}>
+          <SplitHero>SLAGET</SplitHero>
+        </motion.div>
       </HeroContainer>
       <div>TEST</div>
     </>
@@ -20,9 +29,9 @@ const HeroContainer = styled.div`
   display: flex;
   align-items: center;
   z-index: 2;
-  position: absolute;
-  left: 0;
-  top: 0;
+  position: sticky;
+  /* left: 0;
+  top: 0; */
 `;
 
 const SplitHero = styled.div`
