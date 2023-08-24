@@ -5,6 +5,7 @@ import Slide from './components/Slide/Slide';
 import About from './components/About/About';
 import './App.css';
 import { styled } from 'styled-components';
+import { devices } from './Breakpoints';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -45,8 +46,11 @@ const SlideDescription = styled.article`
   font-weight: 400;
   padding-top: 8rem;
   padding-bottom: 6rem;
-  padding-inline: 10rem;
+  padding-inline: 2rem;
   text-align: left;
+  @media only screen and ${devices.md} {
+    padding-inline: 4rem;
+  }
 `;
 
 export default App;

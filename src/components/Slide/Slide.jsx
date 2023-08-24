@@ -34,6 +34,7 @@ const BadNameChangeLater = styled.div`
     width: 100%;
     border-radius: 15px;
     box-shadow: 0px 2px 7px gray;
+    object-fit: cover;
   }
   @media only screen and ${devices.md} {
     height: 25vh;
@@ -58,6 +59,7 @@ const BadNameChangeLater = styled.div`
       width: 50%;
       border-radius: 15px;
       box-shadow: 0px 2px 7px gray;
+      object-fit: cover;
     }
   }
   @media only screen and ${devices.xl} {
@@ -83,6 +85,7 @@ const BadNameChangeLater = styled.div`
       width: 50%;
       border-radius: 15px;
       box-shadow: 0px 2px 7px gray;
+      object-fit: cover;
     }
   }
 `;

@@ -104,13 +104,19 @@ const ScrollDownPrompt = styled.div`
 
 const HeroArticle = styled.article`
   width: auto;
-  padding: 5rem 10rem;
   position: sticky;
+  padding: 5rem 2rem;
   left: 0;
   top: 0;
   text-align: center;
   font-size: 33px;
   font-weight: 700;
+  @media only screen and ${devices.md} {
+    padding: 5rem 4rem;
+  }
+  @media only screen and ${devices.xl} {
+    padding: 5rem 10rem;
+  }
 `;
 
 // The big text "SAMMANSLAGET" on the welcome page.
@@ -119,7 +125,7 @@ const WelcomeText = styled.h1`
 `;
 
 const GroupName = styled.h2`
-  font-family: "BlackOpsOne";
+  font-family: 'BlackOpsOne';
   margin-bottom: 7rem;
   color: white;
   @media only screen and ${devices.xs} {
@@ -169,7 +175,7 @@ const LeftSplitHero = styled(RightSplitHero)`
 
 // Prevents scrolling down until the sliders are completely off screen.
 const HeroAnimationWrapper = styled.section`
-  height: 130vh;
+  min-height: 130vh;
 `;
 
 export default Hero;
