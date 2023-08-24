@@ -4,7 +4,7 @@ import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { devices } from '../../Breakpoints';
 
-import GlobalFonts from "../../fonts/fonts";
+import GlobalFonts from '../../fonts/fonts';
 
 const Hero = () => {
   const targetRef = useRef(null);
@@ -71,7 +71,7 @@ const HeroArticle = styled.article`
 
 // The big text "SAMMANSLAGET" on the welcome page.
 const WelcomeText = styled.h1`
-  font-family: "BlackOpsOne";
+  font-family: 'BlackOpsOne';
 `;
 
 // These two styled divs split to left and right during initial scrolling.
@@ -83,16 +83,16 @@ const RightSplitHero = styled.div`
   display: flex;
   align-items: center;
   @media only screen and ${devices.xs} {
-    font-size: 2rem;
+    font-size: 0.5rem;
   }
   @media only screen and ${devices.sm} {
-    font-size: 4rem;
+    font-size: 1rem;
   }
   @media only screen and ${devices.md} {
-    font-size: 6rem;
+    font-size: 2rem;
   }
   @media only screen and ${devices.xl} {
-    font-size: 10rem;
+    font-size: 3rem;
   }
 `;
 
