@@ -1,17 +1,18 @@
-import { useState } from 'react';
-import Hero from './components/hero/hero';
-import Game from './components/Game/Game';
-import Slide from './components/Slide/Slide';
-import About from './components/About/About';
-import './App.css';
-import { styled } from 'styled-components';
-import { devices } from './Breakpoints';
+import { useState } from "react";
+import Hero from "./components/Hero/Hero";
+import Game from "./components/Game/Game";
+import Slide from "./components/Slide/Slide";
+import About from "./components/About/About";
+import "./App.css";
+import { styled } from "styled-components";
+
+import SelectionTestGif from "../public/Imgs/selectionTest.gif";
 
 function App() {
   const [count, setCount] = useState(0);
 
   const textLorem =
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, nisi molestias. Velit magni optio earum at maxime non necessitatibus reiciendis provident repudiandae corporis? Eius repudiandae rerum odit eligendi at. Quisquam?';
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, nisi molestias. Velit magni optio earum at maxime non necessitatibus reiciendis provident repudiandae corporis? Eius repudiandae rerum odit eligendi at. Quisquam?";
 
   return (
     <>
@@ -25,18 +26,25 @@ function App() {
           urvalsprov.
         </SlideDescription>
         <Slide
-          title={'cool title'}
+          title={"cool title"}
           text={textLorem}
-          img={'https://source.unsplash.com/oXV3bzR7jxI'}
+          img={"https://source.unsplash.com/oXV3bzR7jxI"}
+          alt={"alt text"}
         />
-        <Game />
         <Slide
-          title={'cool title'}
+          title={"cool gif"}
           text={textLorem}
-          img={'https://source.unsplash.com/-uHVRvDr7pg'}
+          img={SelectionTestGif}
+          alt={"alt text"}
+        />
+        <Slide
+          title={"cool title"}
+          text={textLorem}
+          img={"https://source.unsplash.com/-uHVRvDr7pg"}
+          alt={"alt text"}
         />
       </section>
-      <About text={'lots of text'} img={'./../public/Imgs/toiletMan.jpg'} />
+      <About text={"lots of text"} img={"./../public/Imgs/toiletMan.jpg"} />
     </>
   );
 }

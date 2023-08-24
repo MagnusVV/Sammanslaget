@@ -1,20 +1,20 @@
-import styled from 'styled-components';
-import React from 'react';
-import { devices } from '../../Breakpoints';
+import styled from "styled-components";
+import React from "react";
+import { devices } from "../../Breakpoints";
 
 const Slide = (props) => {
   return (
-    <BadNameChangeLater>
-      <img src={props.img} alt="" />
+    <ConceptVisualisation>
+      <img src={props.img} alt={props.alt} />
       <div>
         <h2>{props.title}</h2>
         <p>{props.text}</p>
       </div>
-    </BadNameChangeLater>
+    </ConceptVisualisation>
   );
 };
 
-const BadNameChangeLater = styled.div`
+const ConceptVisualisation = styled.div`
   min-height: 20vh;
   width: 100%;
   margin-bottom: 6rem;
