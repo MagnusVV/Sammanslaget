@@ -73,14 +73,6 @@ const WelcomeText = styled.h1`
   font-family: "BlackOpsOne";
 `;
 
-const ScrollDownArrow = styled.div`
-  font-size: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-`;
-
 // These two styled divs split to left and right during initial scrolling.
 const RightSplitHero = styled.div`
   font-size: 3rem;
