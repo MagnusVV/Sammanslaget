@@ -1,8 +1,8 @@
-import styled from 'styled-components';
-import React from 'react';
-import { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { devices } from '../../Breakpoints';
+import styled from "styled-components";
+import React from "react";
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { devices } from "../../Breakpoints";
 
 import GlobalFonts from "../../fonts/fonts";
 
@@ -18,7 +18,7 @@ const Hero = () => {
         <HeroContainer>
           <motion.div
             style={{
-              x: useTransform(scrollYProgress, [0, 1], ['0%', '-125%']),
+              x: useTransform(scrollYProgress, [0, 1], ["0%", "-125%"]),
             }}
           >
             <LeftSplitHero>
@@ -26,7 +26,7 @@ const Hero = () => {
             </LeftSplitHero>
           </motion.div>
           <motion.div
-            style={{ x: useTransform(scrollYProgress, [0, 1], ['0%', '125%']) }}
+            style={{ x: useTransform(scrollYProgress, [0, 1], ["0%", "125%"]) }}
           >
             <RightSplitHero>
               <WelcomeText>SLAGET</WelcomeText>
@@ -83,16 +83,16 @@ const RightSplitHero = styled.div`
   display: flex;
   align-items: center;
   @media only screen and ${devices.xs} {
-    font-size: 2rem;
+    font-size: 0.5;
   }
   @media only screen and ${devices.sm} {
-    font-size: 4rem;
+    font-size: 1rem;
   }
   @media only screen and ${devices.md} {
-    font-size: 6rem;
+    font-size: 2rem;
   }
   @media only screen and ${devices.xl} {
-    font-size: 10rem;
+    font-size: 3rem;
   }
 `;
 
