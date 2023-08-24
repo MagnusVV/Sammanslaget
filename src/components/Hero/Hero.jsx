@@ -83,7 +83,7 @@ const RightSplitHero = styled.div`
   display: flex;
   align-items: center;
   @media only screen and ${devices.xs} {
-    font-size: 0.5;
+    font-size: 0.5rem;
   }
   @media only screen and ${devices.sm} {
     font-size: 1rem;
