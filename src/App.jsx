@@ -36,7 +36,7 @@ function App() {
           img={'https://source.unsplash.com/-uHVRvDr7pg'}
         />
       </section>
-      <About text={'lots of text'} img={'./../public/Imgs/toiletMan.jpg'} />
+      <About text={'lots of text'} img={'/Imgs/toiletMan.jpg'} />
     </>
   );
 }
