@@ -1,15 +1,35 @@
-import styled from 'styled-components';
-import React from 'react';
-import { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { devices } from '../../Breakpoints';
+import styled from "styled-components";
+import React, { useEffect, useState } from "react";
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { devices } from "../../Breakpoints";
 
-import GlobalFonts from '../../fonts/fonts';
+import GlobalFonts from "../../fonts/fonts";
 
 const Hero = () => {
+  // These two variables handles the "door opening"-effect on the welcome page.
   const targetRef = useRef(null);
 
   const { scrollYProgress } = useScroll({ target: targetRef });
+
+  // This state is only for the "Scrolla ner"-element.
+  const [isVisble, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <>
@@ -18,7 +38,7 @@ const Hero = () => {
         <HeroContainer>
           <motion.div
             style={{
-              x: useTransform(scrollYProgress, [0, 1], ['0%', '-125%']),
+              x: useTransform(scrollYProgress, [0, 1], ["0%", "-125%"]),
             }}
           >
             <LeftSplitHero>
@@ -26,13 +46,14 @@ const Hero = () => {
             </LeftSplitHero>
           </motion.div>
           <motion.div
-            style={{ x: useTransform(scrollYProgress, [0, 1], ['0%', '125%']) }}
+            style={{ x: useTransform(scrollYProgress, [0, 1], ["0%", "125%"]) }}
           >
             <RightSplitHero>
               <WelcomeText>SLAGET</WelcomeText>
             </RightSplitHero>
           </motion.div>
         </HeroContainer>
+        {isVisble && <ScrollDownPrompt>SCROLLA NER</ScrollDownPrompt>}
         <HeroArticle>
           På Yrgo är målet att din utbildning ska leda till jobb efter examen,
           men lika viktigt är att skapa förutsättningar för personlig utveckling
@@ -62,6 +83,20 @@ const HeroContainer = styled.div`
   }
 `;
 
+const ScrollDownPrompt = styled.div`
+  width: 100%;
+  height: 90%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+`;
+
 const HeroArticle = styled.article`
   width: auto;
   padding: 5rem 10rem;
@@ -75,7 +110,7 @@ const HeroArticle = styled.article`
 
 // The big text "SAMMANSLAGET" on the welcome page.
 const WelcomeText = styled.h1`
-  font-family: 'BlackOpsOne';
+  font-family: "BlackOpsOne";
 `;
 
 // These two styled divs split to left and right during initial scrolling.
