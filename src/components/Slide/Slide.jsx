@@ -32,6 +32,8 @@ const BadNameChangeLater = styled.div`
   }
   img {
     width: 100%;
+    border-radius: 15px;
+    box-shadow: 0px 2px 7px gray;
   }
   @media only screen and ${devices.md} {
     height: 25vh;
@@ -54,6 +56,8 @@ const BadNameChangeLater = styled.div`
     }
     img {
       width: 50%;
+      border-radius: 15px;
+      box-shadow: 0px 2px 7px gray;
     }
   }
   @media only screen and ${devices.xl} {
@@ -77,6 +81,8 @@ const BadNameChangeLater = styled.div`
     }
     img {
       width: 50%;
+      border-radius: 15px;
+      box-shadow: 0px 2px 7px gray;
     }
   }
 `;

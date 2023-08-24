@@ -34,10 +34,12 @@ const Hero = () => {
           </motion.div>
         </HeroContainer>
         <HeroArticle>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam
-          dolor modi ex porro? Error temporibus quasi maiores necessitatibus.
-          Dignissimos quae placeat unde cumque, natus tempore corporis
-          laudantium! Eligendi, distinctio unde.
+          På Yrgo är målet att din utbildning ska leda till jobb efter examen,
+          men lika viktigt är att skapa förutsättningar för personlig utveckling
+          och en plattform för att knyta värdefulla kontakter inför framtiden.
+          För att detta ska vara möjligt behövs det ett utförligt urvalsprov som
+          testar om personen besitter de kvaliteter som krävs för att klara av
+          utbildningen och för att växa i yrkeslivet.
         </HeroArticle>
       </HeroAnimationWrapper>
     </>
@@ -67,6 +69,8 @@ const HeroArticle = styled.article`
   left: 0;
   top: 0;
   text-align: center;
+  font-size: 32px;
+  font-weight: 700;
 `;
 
 // The big text "SAMMANSLAGET" on the welcome page.
@@ -82,6 +86,7 @@ const RightSplitHero = styled.div`
   width: 50%;
   display: flex;
   align-items: center;
+  color: white;
   @media only screen and ${devices.xs} {
     font-size: 0.5rem;
   }
@@ -102,7 +107,7 @@ const LeftSplitHero = styled(RightSplitHero)`
 
 // Prevents scrolling down until the sliders are completely off screen.
 const HeroAnimationWrapper = styled.section`
-  height: 200vh;
+  height: 130vh;
 `;
 
 export default Hero;
