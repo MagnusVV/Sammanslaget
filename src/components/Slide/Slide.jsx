@@ -15,16 +15,43 @@ const Slide = (props) => {
 };
 
 const BadNameChangeLater = styled.div`
-  height: 35vh;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 10rem;
-  padding-inline: 10rem;
+  min-height: 20vh;
+  width: 100%;
+  margin-bottom: 5rem;
+  padding-inline: 1rem;
   div {
-    width: 50%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+  }
+  img {
+    width: 100%;
+  }
+  @media only screen and ${devices.md} {
+    height: 25vh;
+    display: flex;
+    padding-inline: 2.5rem;
     gap: 3rem;
+    div {
+      text-align: left;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+  @media only screen and ${devices.xl} {
+    height: 35vh;
+    display: flex;
+    padding-inline: 10rem;
+    gap: 3rem;
+    div {
+      text-align: left;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
   }
 `;
 

@@ -1,10 +1,10 @@
-import styled from "styled-components";
-import React from "react";
-import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { devices } from "../../Breakpoints";
+import styled from 'styled-components';
+import React from 'react';
+import { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { devices } from '../../Breakpoints';
 
-import GlobalFonts from "../../fonts/fonts";
+import GlobalFonts from '../../fonts/fonts';
 
 const Hero = () => {
   const targetRef = useRef(null);
@@ -18,7 +18,7 @@ const Hero = () => {
         <HeroContainer>
           <motion.div
             style={{
-              x: useTransform(scrollYProgress, [0, 1], ["0%", "-125%"]),
+              x: useTransform(scrollYProgress, [0, 1], ['0%', '-125%']),
             }}
           >
             <LeftSplitHero>
@@ -26,7 +26,7 @@ const Hero = () => {
             </LeftSplitHero>
           </motion.div>
           <motion.div
-            style={{ x: useTransform(scrollYProgress, [0, 1], ["0%", "125%"]) }}
+            style={{ x: useTransform(scrollYProgress, [0, 1], ['0%', '125%']) }}
           >
             <RightSplitHero>
               <WelcomeText>SLAGET</WelcomeText>
@@ -71,7 +71,7 @@ const HeroArticle = styled.article`
 
 // The big text "SAMMANSLAGET" on the welcome page.
 const WelcomeText = styled.h1`
-  font-family: "BlackOpsOne";
+  font-family: 'BlackOpsOne';
 `;
 
 // These two styled divs split to left and right during initial scrolling.
@@ -89,7 +89,7 @@ const RightSplitHero = styled.div`
     font-size: 1rem;
   }
   @media only screen and ${devices.md} {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   @media only screen and ${devices.xl} {
     font-size: 3rem;
