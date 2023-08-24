@@ -17,7 +17,7 @@ const Slide = (props) => {
 const BadNameChangeLater = styled.div`
   min-height: 20vh;
   width: 100%;
-  margin-bottom: 5rem;
+  margin-bottom: 6rem;
   padding-inline: 1rem;
   div {
     display: flex;
