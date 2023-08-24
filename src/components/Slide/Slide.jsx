@@ -23,6 +23,12 @@ const BadNameChangeLater = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    p {
+      font-size: 16px;
+    }
+    h2 {
+      font-size: 26px;
+    }
   }
   img {
     width: 100%;
@@ -37,7 +43,17 @@ const BadNameChangeLater = styled.div`
       width: 50%;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: start;
+      gap: 2rem;
+      p {
+        font-size: 18px;
+      }
+      h2 {
+        font-size: 28px;
+      }
+    }
+    img {
+      width: 50%;
     }
   }
   @media only screen and ${devices.xl} {
@@ -50,7 +66,17 @@ const BadNameChangeLater = styled.div`
       width: 50%;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: start;
+      gap: 2rem;
+      p {
+        font-size: 20px;
+      }
+      h2 {
+        font-size: 32px;
+      }
+    }
+    img {
+      width: 50%;
     }
   }
 `;
