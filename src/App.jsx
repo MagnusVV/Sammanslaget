@@ -5,6 +5,7 @@ import Slide from "./components/Slide/Slide";
 import About from "./components/About/About";
 import "./App.css";
 import { styled } from "styled-components";
+import { devices } from "./Breakpoints";
 
 import SelectionTestGif from "../public/Imgs/selectionTest.gif";
 
