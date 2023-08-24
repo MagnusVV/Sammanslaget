@@ -1,10 +1,10 @@
-import styled from "styled-components";
-import React, { useEffect, useState } from "react";
-import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { devices } from "../../Breakpoints";
+import styled from 'styled-components';
+import React, { useEffect, useState } from 'react';
+import { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { devices } from '../../Breakpoints';
 
-import GlobalFonts from "../../fonts/fonts";
+import GlobalFonts from '../../fonts/fonts';
 
 const Hero = () => {
   // These two variables handles the "door opening"-effect on the welcome page.
@@ -24,10 +24,10 @@ const Hero = () => {
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
@@ -38,7 +38,7 @@ const Hero = () => {
         <HeroContainer>
           <motion.div
             style={{
-              x: useTransform(scrollYProgress, [0, 1], ["0%", "-125%"]),
+              x: useTransform(scrollYProgress, [0, 1], ['0%', '-125%']),
             }}
           >
             <LeftSplitHero>
@@ -46,7 +46,7 @@ const Hero = () => {
             </LeftSplitHero>
           </motion.div>
           <motion.div
-            style={{ x: useTransform(scrollYProgress, [0, 1], ["0%", "125%"]) }}
+            style={{ x: useTransform(scrollYProgress, [0, 1], ['0%', '125%']) }}
           >
             <RightSplitHero>
               <WelcomeText>SLAGET</WelcomeText>
@@ -109,13 +109,13 @@ const HeroArticle = styled.article`
   left: 0;
   top: 0;
   text-align: center;
-  font-size: 32px;
+  font-size: 33px;
   font-weight: 700;
 `;
 
 // The big text "SAMMANSLAGET" on the welcome page.
 const WelcomeText = styled.h1`
-  font-family: "BlackOpsOne";
+  font-family: 'BlackOpsOne';
 `;
 
 const GroupName = styled.h2`

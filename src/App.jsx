@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Hero from './components/Hero/Hero';
+import Hero from './components/hero/hero';
 import Game from './components/Game/Game';
 import Slide from './components/Slide/Slide';
 import About from './components/About/About';
@@ -23,12 +23,12 @@ function App() {
           vårt koncept men vi ser att flera program kan använda sig av detta
           urvalsprov.
         </SlideDescription>
-        <Game />
         <Slide
           title={'cool title'}
           text={textLorem}
           img={'https://source.unsplash.com/oXV3bzR7jxI'}
         />
+        <Game />
         <Slide
           title={'cool title'}
           text={textLorem}
@@ -44,7 +44,7 @@ const SlideDescription = styled.article`
   font-size: 25px;
   font-weight: 400;
   padding-top: 8rem;
-  padding-bottom: 3rem;
+  padding-bottom: 6rem;
   padding-inline: 10rem;
   text-align: left;
 `;
