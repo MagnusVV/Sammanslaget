@@ -53,7 +53,12 @@ const Hero = () => {
             </RightSplitHero>
           </motion.div>
         </HeroContainer>
-        {isVisble && <ScrollDownPrompt>SCROLLA NER</ScrollDownPrompt>}
+        {isVisble && (
+          <ScrollDownPrompt>
+            <GroupName>GRUPP 9</GroupName>
+            SCROLLA NER
+          </ScrollDownPrompt>
+        )}
         <HeroArticle>
           På Yrgo är målet att din utbildning ska leda till jobb efter examen,
           men lika viktigt är att skapa förutsättningar för personlig utveckling
@@ -111,6 +116,28 @@ const HeroArticle = styled.article`
 // The big text "SAMMANSLAGET" on the welcome page.
 const WelcomeText = styled.h1`
   font-family: "BlackOpsOne";
+`;
+
+const GroupName = styled.h2`
+  font-family: "BlackOpsOne";
+  margin-bottom: 7rem;
+  color: white;
+  @media only screen and ${devices.xs} {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  @media only screen and ${devices.sm} {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  @media only screen and ${devices.md} {
+    font-size: 2rem;
+    margin-bottom: 5rem;
+  }
+  @media only screen and ${devices.xl} {
+    font-size: 4rem;
+    margin-bottom: 7rem;
+  }
 `;
 
 // These two styled divs split to left and right during initial scrolling.
