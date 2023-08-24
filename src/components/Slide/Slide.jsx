@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import React from 'react';
+import { devices } from '../../Breakpoints';
 
 const Slide = (props) => {
   return (

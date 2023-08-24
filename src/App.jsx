@@ -25,7 +25,7 @@ function App() {
         text={textLorem}
         img={'https://source.unsplash.com/-uHVRvDr7pg'}
       />
-      <About text={'lots of text'} img={'./../public/Imgs/toiletMan.jpg'} />
+      {/* <About text={'lots of text'} img={'./../public/Imgs/toiletMan.jpg'} /> */}
     </>
   );
 }
