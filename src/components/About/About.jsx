@@ -77,6 +77,7 @@ const PersonDiv = styled.div`
     width: 22vh;
     height: 22vh;
     border-radius: 50%;
+    object-fit: cover;
   }
   h3 {
     padding-top: 1rem;
