@@ -14,6 +14,18 @@ import { Unity, useUnityContext } from "react-unity-webgl";
 function App() {
   const textLorem =
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, nisi molestias. Velit magni optio earum at maxime non necessitatibus reiciendis provident repudiandae corporis? Eius repudiandae rerum odit eligendi at. Quisquam?";
+  const groupNames = [
+    "Kevin - GP",
+    "Joel - UX",
+    "Magnus - WU",
+    "Styrbjörn - WU",
+  ];
+  const groupImgs = [
+    "/Imgs/Momo.jpg",
+    "/Imgs/MoaTumbs.jpg",
+    "/Imgs/MoaFlag.jpg",
+    "/Imgs/Su.jpg",
+  ];
 
   const { unityProvider } = useUnityContext({
     loaderUrl: "./src/Build/Build.loader.js",
@@ -59,7 +71,7 @@ function App() {
         />
         <Unity unityProvider={unityProvider} />
       </section>
-      <About text={"lots of text"} img={"./../public/Imgs/toiletMan.jpg"} />
+      <About text={textLorem} img={groupImgs} name={groupNames} />
     </>
   );
 }
