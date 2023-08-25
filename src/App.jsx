@@ -28,10 +28,10 @@ function App() {
   ];
 
   const { unityProvider } = useUnityContext({
-    loaderUrl: "./src/Build/Build.loader.js",
-    dataUrl: "./src/Build/Build.data",
-    frameworkUrl: "./src/Build/Build.framework.js",
-    codeUrl: "./src/Build/Build.wasm",
+    loaderUrl: "./Build/Build.loader.js",
+    dataUrl: "./Build/Build.data",
+    frameworkUrl: "./Build/Build.framework.js",
+    codeUrl: "./Build/Build.wasm",
   });
 
   return (
