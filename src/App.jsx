@@ -74,8 +74,6 @@ function App() {
           }
         />
 
-        {/* <Unity unityProvider={unityProvider} /> */}
-
         <Slide
           title={"Kommunikation och samarbete"}
           text={
@@ -86,7 +84,12 @@ function App() {
             "Fyra personer sitter och diskuterar någonting. Två av dem ler vänligt. En tredje ser allvarlig ut och tar anteckningar, medan bara bakhuvudet på den fjärde syns."
           }
         />
-        {isDesktop == true && <Unity unityProvider={unityProvider} />}
+        {isDesktop == true && (
+          <Unity
+            unityProvider={unityProvider}
+            style={{ width: "50%", borderRadius: "15px" }}
+          />
+        )}
       </section>
       <About text={groupIntro} img={groupImgs} name={groupNames} />
     </>
