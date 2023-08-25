@@ -13,28 +13,28 @@ const About = (props) => {
             <img src={props.img[0]} alt="" />
             <div>
               <h3>{props.name[0]}</h3>
-              <p>{props.text}</p>
+              <p>{props.text[0]}</p>
             </div>
           </PersonDiv>
           <PersonDiv>
             <img src={props.img[1]} alt="" />
             <div>
               <h3>{props.name[1]}</h3>
-              <p>{props.text}</p>
+              <p>{props.text[1]}</p>
             </div>
           </PersonDiv>
           <PersonDiv>
             <img src={props.img[2]} alt="" />
             <div>
               <h3>{props.name[2]}</h3>
-              <p>{props.text}</p>
+              <p>{props.text[2]}</p>
             </div>
           </PersonDiv>
           <PersonDiv>
             <img src={props.img[3]} alt="" />
             <div>
               <h3>{props.name[3]}</h3>
-              <p>{props.text}</p>
+              <p>{props.text[3]}</p>
             </div>
           </PersonDiv>
         </MemberSection>
