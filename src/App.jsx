@@ -10,8 +10,6 @@ import { devices } from "./Breakpoints";
 import SelectionTestGif from "../public/Imgs/selectionTest.gif";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   const textLorem =
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, nisi molestias. Velit magni optio earum at maxime non necessitatibus reiciendis provident repudiandae corporis? Eius repudiandae rerum odit eligendi at. Quisquam?";
 
@@ -28,7 +26,9 @@ function App() {
         </SlideDescription>
         <Slide
           title={"cool title"}
-          text={textLorem}
+          text={
+            "Person vid ett bord fyller i ett papper med en penna. Bara personens händer syns."
+          }
           img={"https://source.unsplash.com/oXV3bzR7jxI"}
           alt={"alt text"}
         />
@@ -40,7 +40,9 @@ function App() {
         />
         <Slide
           title={"cool title"}
-          text={textLorem}
+          text={
+            "Fyra personer sitter och diskuterar någonting. Två av dem ler vänligt. En tredje ser allvarlig ut och tar anteckningar, medan bara bakhuvudet på den fjärde syns."
+          }
           img={"https://source.unsplash.com/-uHVRvDr7pg"}
           alt={"alt text"}
         />
