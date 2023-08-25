@@ -9,9 +9,9 @@ import { devices } from './Breakpoints';
 
 import SelectionTestGif from '../public/Imgs/selectionTest.gif';
 
-function App() {
-  const [count, setCount] = useState(0);
+import { Unity, useUnityContext } from "react-unity-webgl";
 
+function App() {
   const textLorem =
     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, nisi molestias. Velit magni optio earum at maxime non necessitatibus reiciendis provident repudiandae corporis? Eius repudiandae rerum odit eligendi at. Quisquam?';
   const groupNames = [
@@ -27,6 +27,13 @@ function App() {
     '/Imgs/Su.jpg',
   ];
 
+  const { unityProvider } = useUnityContext({
+    loaderUrl: "src/Build/Build.loader.js",
+    dataUrl: "src/Build/Build.data",
+    frameworkUrl: "src/Build/Build.framework.js",
+    codeUrl: "src/Build/Build.wasm",
+  });
+
   return (
     <>
       <Hero />
@@ -41,8 +48,10 @@ function App() {
         <Slide
           title={'cool title'}
           text={textLorem}
-          img={'https://source.unsplash.com/oXV3bzR7jxI'}
-          alt={'alt text'}
+          img={"https://source.unsplash.com/oXV3bzR7jxI"}
+          alt={
+            "Person vid ett bord fyller i ett papper med en penna. Bara personens händer syns."
+          }
         />
         <Slide
           title={'cool gif'}
@@ -50,11 +59,16 @@ function App() {
           img={SelectionTestGif}
           alt={'alt text'}
         />
+
+        <Unity unityProvider={unityProvider} />
+
         <Slide
           title={'cool title'}
           text={textLorem}
-          img={'https://source.unsplash.com/-uHVRvDr7pg'}
-          alt={'alt text'}
+          img={"https://source.unsplash.com/-uHVRvDr7pg"}
+          alt={
+            "Fyra personer sitter och diskuterar någonting. Två av dem ler vänligt. En tredje ser allvarlig ut och tar anteckningar, medan bara bakhuvudet på den fjärde syns."
+          }
         />
       </section>
       <About text={textLorem} img={groupImgs} name={groupNames} />
