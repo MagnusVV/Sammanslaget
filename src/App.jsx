@@ -16,10 +16,10 @@ function App() {
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, nisi molestias. Velit magni optio earum at maxime non necessitatibus reiciendis provident repudiandae corporis? Eius repudiandae rerum odit eligendi at. Quisquam?";
 
   const { unityProvider } = useUnityContext({
-    loaderUrl: "src/Build/Build.loader.js",
-    dataUrl: "src/Build/Build.data",
-    frameworkUrl: "src/Build/Build.framework.js",
-    codeUrl: "src/Build/Build.wasm",
+    loaderUrl: "./src/Build/Build.loader.js",
+    dataUrl: "./src/Build/Build.data",
+    frameworkUrl: "./src/Build/Build.framework.js",
+    codeUrl: "./src/Build/Build.wasm",
   });
 
   return (
@@ -45,11 +45,10 @@ function App() {
           title={"cool gif"}
           text={textLorem}
           img={SelectionTestGif}
-          alt={"alt text"}
+          alt={
+            "GIF som visar ett utsnitt av hur prototypen fungerar, med block som flyttas omkring och fästs på en bottenplatta."
+          }
         />
-
-        <Unity unityProvider={unityProvider} />
-
         <Slide
           title={"cool title"}
           text={textLorem}
@@ -58,6 +57,7 @@ function App() {
             "Fyra personer sitter och diskuterar någonting. Två av dem ler vänligt. En tredje ser allvarlig ut och tar anteckningar, medan bara bakhuvudet på den fjärde syns."
           }
         />
+        <Unity unityProvider={unityProvider} />
       </section>
       <About text={"lots of text"} img={"./../public/Imgs/toiletMan.jpg"} />
     </>
