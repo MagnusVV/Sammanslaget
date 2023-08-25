@@ -6,7 +6,7 @@ import "./App.css";
 import { styled } from "styled-components";
 import { devices } from "./Breakpoints";
 
-import SelectionTestGif from "../public/Imgs/selectionTest.gif";
+import SelectionTestGif from "../public/Imgs/example.gif";
 
 import { Unity, useUnityContext } from "react-unity-webgl";
 
