@@ -9,9 +9,18 @@ import { devices } from "./Breakpoints";
 
 import SelectionTestGif from "../public/Imgs/selectionTest.gif";
 
+import { Unity, useUnityContext } from "react-unity-webgl";
+
 function App() {
   const textLorem =
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, nisi molestias. Velit magni optio earum at maxime non necessitatibus reiciendis provident repudiandae corporis? Eius repudiandae rerum odit eligendi at. Quisquam?";
+
+  const { unityProvider } = useUnityContext({
+    loaderUrl: "src/Build/Build.loader.js",
+    dataUrl: "src/Build/Build.data",
+    frameworkUrl: "src/Build/Build.framework.js",
+    codeUrl: "src/Build/Build.wasm",
+  });
 
   return (
     <>
@@ -38,6 +47,9 @@ function App() {
           img={SelectionTestGif}
           alt={"alt text"}
         />
+
+        <Unity unityProvider={unityProvider} />
+
         <Slide
           title={"cool title"}
           text={textLorem}
