@@ -53,7 +53,7 @@ const AboutWrapper = styled.div`
     font-size: 32px;
     font-family: "BlackOpsOne";
   }
-  @media only screen and ${devices.xl} {
+  @media only screen and ${devices.lg} {
     margin-top: 5rem;
   }
 `;

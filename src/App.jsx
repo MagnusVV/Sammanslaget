@@ -85,10 +85,20 @@ function App() {
           }
         />
         {isDesktop == true && (
-          <Unity
-            unityProvider={unityProvider}
-            style={{ width: "50%", borderRadius: "15px" }}
-          />
+          <>
+            <h2
+              style={{
+                fontSize: "clamp(1.375rem, -0.125rem + 2.3438vw, 1.75rem)",
+                marginBottom: "1.5rem",
+              }}
+            >
+              Interaktiv prototyp
+            </h2>
+            <Unity
+              unityProvider={unityProvider}
+              style={{ width: "50%", borderRadius: "15px" }}
+            />
+          </>
         )}
       </section>
       <About text={groupIntro} img={groupImgs} name={groupNames} />
