@@ -60,10 +60,13 @@ const MemberSection = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  align-items: center;
   padding-block: 5rem;
   gap: 3rem;
   @media only screen and ${devices.xl} {
     flex-direction: row;
+    justify-content: space-evenly;
+    align-items: none;
   }
 `;
 const PersonDiv = styled.div`
@@ -87,6 +90,7 @@ const PersonDiv = styled.div`
     padding-inline: 1rem;
   }
   @media only screen and ${devices.md} {
+    width: 80%;
     flex-direction: row;
     justify-content: center;
     text-align: left;
