@@ -26,11 +26,11 @@ function App() {
         </SlideDescription>
         <Slide
           title={"cool title"}
-          text={
+          text={textLorem}
+          img={"https://source.unsplash.com/oXV3bzR7jxI"}
+          alt={
             "Person vid ett bord fyller i ett papper med en penna. Bara personens händer syns."
           }
-          img={"https://source.unsplash.com/oXV3bzR7jxI"}
-          alt={"alt text"}
         />
         <Slide
           title={"cool gif"}
@@ -40,11 +40,11 @@ function App() {
         />
         <Slide
           title={"cool title"}
-          text={
+          text={textLorem}
+          img={"https://source.unsplash.com/-uHVRvDr7pg"}
+          alt={
             "Fyra personer sitter och diskuterar någonting. Två av dem ler vänligt. En tredje ser allvarlig ut och tar anteckningar, medan bara bakhuvudet på den fjärde syns."
           }
-          img={"https://source.unsplash.com/-uHVRvDr7pg"}
-          alt={"alt text"}
         />
       </section>
       <About text={"lots of text"} img={"./../public/Imgs/toiletMan.jpg"} />
