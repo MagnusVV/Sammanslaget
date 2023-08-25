@@ -9,7 +9,7 @@ import { devices } from './Breakpoints';
 
 import SelectionTestGif from '../public/Imgs/selectionTest.gif';
 
-import { Unity, useUnityContext } from "react-unity-webgl";
+import { Unity, useUnityContext } from 'react-unity-webgl';
 
 function App() {
   const textLorem =
@@ -28,10 +28,10 @@ function App() {
   ];
 
   const { unityProvider } = useUnityContext({
-    loaderUrl: "src/Build/Build.loader.js",
-    dataUrl: "src/Build/Build.data",
-    frameworkUrl: "src/Build/Build.framework.js",
-    codeUrl: "src/Build/Build.wasm",
+    loaderUrl: 'src/Build/Build.loader.js',
+    dataUrl: 'src/Build/Build.data',
+    frameworkUrl: 'src/Build/Build.framework.js',
+    codeUrl: 'src/Build/Build.wasm',
   });
 
   return (
@@ -46,28 +46,34 @@ function App() {
           urvalsprov.
         </SlideDescription>
         <Slide
-          title={'cool title'}
-          text={textLorem}
-          img={"https://source.unsplash.com/oXV3bzR7jxI"}
+          title={'Kompetens, logik och resonemang:'}
+          text={
+            'Första delen av urvalsprovet görs individuellt där personen får utföra allmänna kognitiva uppgifter, svara på flervalsfrågor kring ämnet samt fritextfrågor där personen behöver resonera kring en lösning till ett specifikt problem. Denna del sker på plats och frågorna besvaras på en dator, det skall finnas en testledare på plats för att hjälpa till om något strular samt ha ett överseende så att inget fusk äger rum. '
+          }
+          img={'https://source.unsplash.com/oXV3bzR7jxI'}
           alt={
-            "Person vid ett bord fyller i ett papper med en penna. Bara personens händer syns."
+            'Person vid ett bord fyller i ett papper med en penna. Bara personens händer syns.'
           }
         />
         <Slide
-          title={'cool gif'}
-          text={textLorem}
+          title={'Kreativ problemlösning:'}
+          text={
+            'Nästa moment är att återskapa en 3D figur med hjälp av olika byggblock genom att placera dem utefter en ritning. Problemet är att byggblocken inte stämmer med dem i ritningen och kräver att personen behöver tänka kreativt för att återskapa figuren. På detta sätt kan vi se hur testpersonen kan lösa ett tidspressat problem med hjälp av sin kreativa förmåga. Till vänster ser ni en demo på vår prototyp.  '
+          }
           img={SelectionTestGif}
           alt={'alt text'}
         />
 
-        <Unity unityProvider={unityProvider} />
+        {/* <Unity unityProvider={unityProvider} /> */}
 
         <Slide
-          title={'cool title'}
-          text={textLorem}
-          img={"https://source.unsplash.com/-uHVRvDr7pg"}
+          title={'Kommunikation och samarbete'}
+          text={
+            'Den sista delen av urvalsprovet är en gruppuppgift där flera sökande får jobba i grupp där under viss tid lösa ett problem tillsammans. Syftet med denna uppgift är att avgöra hur väl deltagarna kommunicerar sina resonemang samt hur de samarbetar med de andra för att lösa problemet. En testledare är närvarande för att förklara uppgiften och för anteckningar på hur varje deltagare tar sig an uppgiften. '
+          }
+          img={'https://source.unsplash.com/-uHVRvDr7pg'}
           alt={
-            "Fyra personer sitter och diskuterar någonting. Två av dem ler vänligt. En tredje ser allvarlig ut och tar anteckningar, medan bara bakhuvudet på den fjärde syns."
+            'Fyra personer sitter och diskuterar någonting. Två av dem ler vänligt. En tredje ser allvarlig ut och tar anteckningar, medan bara bakhuvudet på den fjärde syns.'
           }
         />
       </section>

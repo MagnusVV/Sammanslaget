@@ -62,7 +62,7 @@ const Hero = () => {
         <HeroArticle>
           På Yrgo är målet att din utbildning ska leda till jobb efter examen,
           men lika viktigt är att skapa förutsättningar för personlig utveckling
-          och en plattform för att knyta värdefulla kontakter inför framtiden.
+          och en plattform för att knyta värdefulla kontakter inför framtiden. <br/>
           För att detta ska vara möjligt behövs det ett utförligt urvalsprov som
           testar om personen besitter de kvaliteter som krävs för att klara av
           utbildningen och för att växa i yrkeslivet.

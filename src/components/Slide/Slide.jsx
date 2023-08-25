@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import React from "react";
-import { devices } from "../../Breakpoints";
+import styled from 'styled-components';
+import React from 'react';
+import { devices } from '../../Breakpoints';
 
 const Slide = (props) => {
   return (
@@ -47,16 +47,16 @@ const ConceptVisualisation = styled.div`
       display: flex;
       flex-direction: column;
       justify-content: start;
-      gap: 2rem;
+      gap: 0.5rem;
       p {
         font-size: 18px;
       }
       h2 {
-        font-size: 28px;
+        font-size: 22px;
       }
     }
     img {
-      width: 50%;
+      width: 40%;
       border-radius: 15px;
       box-shadow: 0px 2px 7px gray;
       object-fit: cover;
@@ -73,12 +73,12 @@ const ConceptVisualisation = styled.div`
       display: flex;
       flex-direction: column;
       justify-content: start;
-      gap: 2rem;
+      gap: 1rem;
       p {
-        font-size: 20px;
+        font-size: 18px;
       }
       h2 {
-        font-size: 32px;
+        font-size: 28px;
       }
     }
     img {
