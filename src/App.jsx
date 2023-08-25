@@ -1,30 +1,36 @@
-import { useState } from "react";
-import Hero from "./components/Hero/Hero";
-import Game from "./components/Game/Game";
-import Slide from "./components/Slide/Slide";
-import About from "./components/About/About";
-import "./App.css";
-import { styled } from "styled-components";
-import { devices } from "./Breakpoints";
+import { useState } from 'react';
+import Hero from './components/Hero/Hero';
+import Game from './components/Game/Game';
+import Slide from './components/Slide/Slide';
+import About from './components/About/About';
+import './App.css';
+import { styled } from 'styled-components';
+import { devices } from './Breakpoints';
 
-import SelectionTestGif from "../public/Imgs/selectionTest.gif";
+import SelectionTestGif from '../public/Imgs/selectionTest.gif';
 
 import { Unity, useUnityContext } from "react-unity-webgl";
 
 function App() {
   const textLorem =
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, nisi molestias. Velit magni optio earum at maxime non necessitatibus reiciendis provident repudiandae corporis? Eius repudiandae rerum odit eligendi at. Quisquam?";
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, nisi molestias. Velit magni optio earum at maxime non necessitatibus reiciendis provident repudiandae corporis? Eius repudiandae rerum odit eligendi at. Quisquam?';
   const groupNames = [
-    "Kevin - GP",
-    "Joel - UX",
-    "Magnus - WU",
-    "Styrbjörn - WU",
+    'Kevin - GP',
+    'Joel - UX',
+    'Magnus - WU',
+    'Styrbjörn - WU',
   ];
   const groupImgs = [
-    "/Imgs/Momo.jpg",
-    "/Imgs/MoaTumbs.jpg",
-    "/Imgs/MoaFlag.jpg",
-    "/Imgs/Su.jpg",
+    '/Imgs/Kevin.png',
+    '/Imgs/Joel.jpg',
+    '/Imgs/Magnus.jpg',
+    '/Imgs/Styrbjorn.jpg',
+  ];
+  const groupIntro = [
+    'GP-student som gillar att spela och skapa spel.',
+    '26 år gammal UX-design student, som tycker om att spela musik och laga mat på fritiden. Singel.  ',
+    'WU-student i sina bästa år. Lyssnar också mycket på musik och tycker om dystopisk film. ',
+    '22 årig WU student. Lyssnar mycket på musik på fritiden.',
   ];
 
   const { unityProvider } = useUnityContext({
@@ -58,11 +64,11 @@ function App() {
         <Slide
           title={"Kreativ problemlösning:"}
           text={
-            "Nästa moment är att återskapa en 3D figur med hjälp av olika byggblock genom att placera dem utefter en ritning. Problemet är att byggblocken inte stämmer med dem i ritningen och kräver att personen behöver tänka kreativt för att återskapa figuren. På detta sätt kan vi se hur testpersonen kan lösa ett tidspressat problem med hjälp av sin kreativa förmåga. Till vänster ser ni en demo på vår prototyp.  "
+            'Nästa moment är att återskapa en 3D-figur med hjälp av olika byggblock genom att placera dem utefter en ritning. Problemet är att byggblocken inte stämmer med dem i ritningen och kräver att personen behöver tänka kreativt för att återskapa figuren. På detta sätt kan vi se hur testpersonen kan lösa ett tidspressat problem med hjälp av sin kreativa förmåga. Till vänster ser ni en demo på vår prototyp.  '
           }
           img={SelectionTestGif}
           alt={
-            "GIF som visar ett utsnitt av hur prototypen fungerar, med block som flyttas omkring och fästs på en bottenplatta."
+            'GIF som visar ett utsnitt av hur prototypen fungerar, med block som flyttas omkring och fästs på en bottenplatta.'
           }
         />
 
@@ -80,7 +86,7 @@ function App() {
         />
         <Unity unityProvider={unityProvider} />
       </section>
-      <About text={textLorem} img={groupImgs} name={groupNames} />
+      <About text={groupIntro} img={groupImgs} name={groupNames} />
     </>
   );
 }

@@ -62,7 +62,8 @@ const Hero = () => {
         <HeroArticle>
           På Yrgo är målet att din utbildning ska leda till jobb efter examen,
           men lika viktigt är att skapa förutsättningar för personlig utveckling
-          och en plattform för att knyta värdefulla kontakter inför framtiden. <br/>
+          och en plattform för att knyta värdefulla kontakter inför framtiden.{' '}
+          <br />
           För att detta ska vara möjligt behövs det ett utförligt urvalsprov som
           testar om personen besitter de kvaliteter som krävs för att klara av
           utbildningen och för att växa i yrkeslivet.
@@ -111,11 +112,14 @@ const HeroArticle = styled.article`
   text-align: center;
   font-size: 33px;
   font-weight: 700;
+  margin-top: 15rem;
   @media only screen and ${devices.md} {
     padding: 5rem 4rem;
+    margin-top: 0rem;
   }
   @media only screen and ${devices.xl} {
     padding: 5rem 10rem;
+    margin-top: 0rem;
   }
 `;
 
@@ -175,7 +179,10 @@ const LeftSplitHero = styled(RightSplitHero)`
 
 // Prevents scrolling down until the sliders are completely off screen.
 const HeroAnimationWrapper = styled.section`
-  min-height: 130vh;
+  min-height: 115vh;
+  @media only screen and ${devices.xl} {
+    min-height: 130vh;
+  }
 `;
 
 export default Hero;
