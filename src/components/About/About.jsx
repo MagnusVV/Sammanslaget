@@ -1,7 +1,7 @@
-import styled from 'styled-components';
-import React from 'react';
-import GlobalFonts from '../../fonts/fonts';
-import { devices } from '../../Breakpoints';
+import styled from "styled-components";
+import React from "react";
+import GlobalFonts from "../../fonts/fonts";
+import { devices } from "../../Breakpoints";
 
 const About = (props) => {
   return (
@@ -42,6 +42,7 @@ const About = (props) => {
     </>
   );
 };
+
 const AboutWrapper = styled.div`
   width: 100%;
   min-height: 40vh;
@@ -50,10 +51,10 @@ const AboutWrapper = styled.div`
   h2 {
     padding-top: 2rem;
     font-size: 32px;
-    font-family: 'BlackOpsOne';
+    font-family: "BlackOpsOne";
   }
   @media only screen and ${devices.xl} {
-    margin-top: 10rem;
+    margin-top: 5rem;
   }
 `;
 
