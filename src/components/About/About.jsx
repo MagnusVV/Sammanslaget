@@ -52,6 +52,9 @@ const AboutWrapper = styled.div`
     font-size: 32px;
     font-family: 'BlackOpsOne';
   }
+  @media only screen and ${devices.xl} {
+    margin-top: 10rem;
+  }
 `;
 
 const MemberSection = styled.div`
