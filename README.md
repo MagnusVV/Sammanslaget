@@ -6,7 +6,8 @@ The "Sammaslaget" project is a cooperative recurring event at YRGO. It is sort o
 ## The process
 We started out focusing on the WU selection test, but during a brain storming session we realised that our idea was open enough to be applied to other courses' tests as well, so we went from a specifc to a more general approach. The remaing part of the process saw the pupil from UX produce clear and accessible information texts about the concept, the pupil from GP producing an interactive prototype using the Unity engine, and us from WU creating and deploying a site to host the concept.
 
-[Deployed site](https://sammanslaget-dun.vercel.app/)
+[Deployed site](https://sammanslaget-dun.vercel.app/)</br>
+Created as a React app with Vite scaffolding and some Framer motion animations.
 
 ## Participants
 UX23: Joel S</br>
